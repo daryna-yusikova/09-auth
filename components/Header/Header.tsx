@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import css from './Header.module.css';
-import AuthNavigation from '../AuthNavigaton/AuthNavigation';
+import AuthNavigation from '../AuthNavigation/AuthNavigation';
 
 export default function Header() {
   return (

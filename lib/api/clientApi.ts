@@ -93,3 +93,11 @@ export const checkSession = async () => {
 };
 
 
+export const logout = async (): Promise<void> => {
+  await nextServer.post('/auth/logout');
+};
+
+export const updateMe = async (data: { username: string }): Promise<User> => {
+  const { data: res } = await nextServer.patch<User>('/users/me', data);
+  return res;
+};

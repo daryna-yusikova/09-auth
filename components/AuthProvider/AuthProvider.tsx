@@ -33,7 +33,7 @@ const AuthProvider = ({ children }: Props) => {
     fetchUser();
   }, [setUser, clearIsAuthenticated]);
 
-  return children;
+  return <>{children}</>;
 };
 
 export default AuthProvider;

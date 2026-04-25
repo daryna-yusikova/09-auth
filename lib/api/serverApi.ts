@@ -61,3 +61,23 @@ export const getMe = async () => {
 
 
 
+// lib/api/serverApi.ts
+
+
+
+export const checkServerSession = async () => {
+  // Дістаємо поточні cookie
+  const cookieStore = await cookies();
+  const res = await nextServer.get('/auth/session', {
+    headers: {
+      // передаємо кукі далі
+      Cookie: cookieStore.toString(),
+    },
+  });
+  // Повертаємо повний респонс, щоб proxy мав доступ до нових cookie
+  return res;
+};
+
+
+
+

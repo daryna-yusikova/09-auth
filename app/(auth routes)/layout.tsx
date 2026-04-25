@@ -20,5 +20,5 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
     setLoading(false);
     router.refresh();
   }, [clearIsAuthenticated, router]);
-  return loading ? <p>Loading...</p> : { children };
+  return loading ? <p>Loading...</p> : children;
 }
