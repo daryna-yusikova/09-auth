@@ -1,4 +1,4 @@
-import { fetchNoteById } from '@/lib/api/api';
+import { fetchNoteById } from '@/lib/api/serverApi';
 import css from './NoteDetails.module.css';
 import {
   QueryClient,
