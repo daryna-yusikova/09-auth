@@ -21,6 +21,7 @@ export default function NoteForm() {
       queryClient.invalidateQueries({ queryKey: ['notes'] });
       clearDraft();
       router.back();
+      router.refresh();
     },
     onError: (error: Error) => {
       alert(`Failed to create note: ${error.message}`);

@@ -66,19 +66,19 @@ export interface userData{
 }
 
 export async function login(userData:userData):Promise<User> {
-    const { data } = await nextServer.post<User>('/auth/login/', userData);
+    const { data } = await nextServer.post<User>('/auth/login', userData);
     return data
 }
 
 
 
 export async function register(userData:userData):Promise<User> {
-    const { data } = await nextServer.post<User>('/auth/register/', userData);
+    const { data } = await nextServer.post<User>('/auth/register', userData);
     return data
 }
 
 export const getMe = async () => {
-  const { data } = await nextServer.get<User>('/auth/me');
+  const { data } = await nextServer.get<User>('/users/me');
   return data;
 };
 
