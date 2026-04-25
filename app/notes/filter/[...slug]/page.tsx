@@ -1,5 +1,5 @@
 import NoteList from '@/components/NoteList/NoteList';
-import { fetchNoteById, fetchNotes } from '@/lib/api';
+import { fetchNoteById, fetchNotes } from '@/lib/api/serverApi';
 import {
   dehydrate,
   HydrationBoundary,
