@@ -9,8 +9,8 @@ import axios from "axios"
 // запити завжди йшли на правильний сервер, незалежно від середовища.
 
 
-
-const baseUrl = process.env.NEXT_PUBLIC_API_URL + '/api'
+const baseUrl =
+  (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000') + '/api';
 
 export const nextServer = axios.create({
   baseURL: baseUrl,
