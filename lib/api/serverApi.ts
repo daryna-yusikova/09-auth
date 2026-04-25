@@ -9,19 +9,6 @@ import { Note } from "@/types/note";
 import { User } from "@/types/user";
 
 
-type CheckSessionRequest = {
-  success: boolean;
-};
-
-
-export const checkSession = async () => {
-  const cookieStore = await cookies();
-  const res = await nextServer.get('/auth/session', {
-    headers: { Cookie: cookieStore.toString() },
-  });
-  return res; 
-};
-
 const perPage = 12;
 
 
