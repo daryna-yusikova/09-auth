@@ -1,9 +1,11 @@
 'use client';
+
 import { useAuthStore } from '@/lib/store/authStore';
 import css from './EditProfilePage.module.css';
 import { useRouter } from 'next/navigation';
 import { updateMe } from '@/lib/api/clientApi';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function EditPage() {
   const user = useAuthStore(state => state.user);
@@ -17,8 +19,7 @@ export default function EditPage() {
       if (userName) {
         const updatedUser = await updateMe({ username: userName });
         setUser(updatedUser);
-        console.log(updatedUser);
-        router.replace('/profile');
+        router.push('/profile');
       }
     } catch {
       setError('Could not update username');
@@ -30,8 +31,8 @@ export default function EditPage() {
       <div className={css.profileCard}>
         <h1 className={css.formTitle}>Edit Profile</h1>
 
-        <img
-          src={user?.avatar}
+        <Image
+          src={user?.avatar || ''}
           alt="User Avatar"
           width={120}
           height={120}
@@ -56,10 +57,11 @@ export default function EditPage() {
             <button type="submit" className={css.saveButton}>
               Save
             </button>
+
             <button
               type="button"
               className={css.cancelButton}
-              onClick={() => router.push('/profile')}
+              onClick={() => router.back()}
             >
               Cancel
             </button>

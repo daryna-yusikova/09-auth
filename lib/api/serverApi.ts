@@ -15,11 +15,12 @@ type CheckSessionRequest = {
 
 
 export const checkSession = async () => {
-    const cookieStore = await cookies()
-  const res = await nextServer.get<CheckSessionRequest>('/auth/session', {headers: {Cookie:cookieStore.toString() }});
-  return res.data.success;
+  const cookieStore = await cookies();
+  const res = await nextServer.get('/auth/session', {
+    headers: { Cookie: cookieStore.toString() },
+  });
+  return res; 
 };
-
 
 const perPage = 12;
 
@@ -46,7 +47,7 @@ export async function fetchNotes (searchQuery: string, pageNumber:number, tag?:s
 
 
 export async function fetchNoteById(id: Note['id']) {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const { data } = await nextServer.get<Note>(`/notes/${id}`,{headers:{Cookie:cookieStore.toString()}});
     return data
     
@@ -54,8 +55,8 @@ export async function fetchNoteById(id: Note['id']) {
 
 
 export const getMe = async () => {
-  const cookieStore = cookies();
-  const { data } = await nextServer.get<User>('/auth/me',{headers:{Cookie:cookieStore.toString()}});
+  const cookieStore = await cookies();
+  const { data } = await nextServer.get<User>('/users/me',{headers:{Cookie:cookieStore.toString()}});
   return data;
 };
 
