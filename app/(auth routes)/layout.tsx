@@ -1,6 +1,7 @@
 'use client';
 
 import { useAuthStore } from '@/lib/store/authStore';
+import Loader from '@/components/Loader/Loader';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -20,5 +21,5 @@ export default function PublicLayout({ children }: PublicLayoutProps) {
     setLoading(false);
     router.refresh();
   }, [clearIsAuthenticated, router]);
-  return loading ? <p>Loading...</p> : children;
+  return loading ? <Loader fullscreen label="Preparing sign-in..." /> : children;
 }

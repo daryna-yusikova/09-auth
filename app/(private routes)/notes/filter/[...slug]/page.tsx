@@ -24,7 +24,7 @@ export async function generateMetadata({
       title: `Notes: ${slug}`,
       description: `Notes tagged: ${slug} `,
       url: `https://notehub.com/notes/${slug}`,
-      siteName: 'NoteHub',
+      siteName: 'NoteyPop',
       images: [
         {
           url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',

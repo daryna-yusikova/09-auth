@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchNoteById } from '@/lib/api/clientApi';
 import NotePreview from '@/components/NotePreview/NotePreview';
 import Modal from '@/components/Modal/Modal';
+import Loader from '@/components/Loader/Loader';
 import { useRouter } from 'next/navigation';
 
 interface NotePreviewClientProps {
@@ -30,7 +31,7 @@ export default function NotePreviewClient({ id }: NotePreviewClientProps) {
   if (isLoading) {
     return (
       <Modal onClose={handleClose}>
-        <p>Завантаження...</p>
+        <Loader label="Loading note preview..." />
       </Modal>
     );
   }

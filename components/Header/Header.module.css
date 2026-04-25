@@ -3,19 +3,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
+  background: linear-gradient(90deg, #ff87c2, #ff5ca8 45%, #d977ff);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
 }
 
 .headerLink {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
+  letter-spacing: 0.3px;
 }
 
 .headerLink:hover {
-  color: #ddd;
+  color: #fff7fc;
 }
 
 .navigation {
@@ -33,9 +35,12 @@
 
 .navigationLink {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 999px;
 }
 .navigationLink:hover {
-  color: #ddd;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }

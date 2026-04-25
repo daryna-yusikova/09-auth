@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import css from './Home.module.css';
 
 export const metadata: Metadata = {
-  title: 'NoteHub-Not-Found',
+  title: 'NoteyPop-Not-Found',
   description: 'Oops, this page does not exist',
   openGraph: {
-    title: 'NoteHub-Not-Found',
+    title: 'NoteyPop-Not-Found',
     description:
-      'Notehub is an answer to your procrastination struggles. But this page does not exist sorry.',
+      'NoteyPop is an answer to your procrastination struggles. But this page does not exist sorry.',
     url: 'https://notehub.com/',
     images: [
       {

@@ -3,11 +3,11 @@ import css from './CreateNote.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Create Note - NoteHub',
-  description: 'Create a new note in NoteHub.',
+  title: 'Create Note - NoteyPop',
+  description: 'Create a new note in NoteyPop.',
   openGraph: {
-    title: 'Create Note - NoteHub',
-    description: 'Create a new note in NoteHub.',
+    title: 'Create Note - NoteyPop',
+    description: 'Create a new note in NoteyPop.',
     url: 'https://notehub.app/notes/action/create',
     images: [
       {

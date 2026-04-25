@@ -5,7 +5,7 @@ import { getMe } from '@/lib/api/serverApi';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Profile - NoteHub',
+  title: 'Profile - NoteyPop',
   description: 'User profile page',
 };
 

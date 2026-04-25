@@ -12,14 +12,17 @@
 .title {
   font-size: 36px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-main);
   margin-bottom: 60px;
   text-align: center;
+  text-shadow: 0 4px 10px rgba(255, 92, 168, 0.2);
+  animation: floatIn 0.55s ease both;
 }
 
 .description {
   font-size: 18px;
-  color: #444444;
+  color: var(--text-muted);
   line-height: 28px;
   margin-bottom: 16px;
+  animation: floatIn 0.55s ease both;
 }

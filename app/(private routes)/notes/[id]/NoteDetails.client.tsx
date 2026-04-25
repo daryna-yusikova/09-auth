@@ -3,6 +3,7 @@ import { useParams } from 'next/navigation';
 import css from './NoteDetails.module.css';
 import { useQuery } from '@tanstack/react-query';
 import { fetchNoteById } from '@/lib/api/clientApi';
+import Loader from '@/components/Loader/Loader';
 export default function NoteDetailsClient() {
   const { id } = useParams<{ id: string }>();
 
@@ -15,7 +16,7 @@ export default function NoteDetailsClient() {
   return (
     <div className={css.container}>
       <div className={css.item}>
-        {isLoading && <p>Loading, please wait...</p>}
+        {isLoading && <Loader label="Loading note details..." />}
         {error && <p>Something went wrong.</p>}
         {data && (
           <>

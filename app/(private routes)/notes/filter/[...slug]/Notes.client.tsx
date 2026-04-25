@@ -3,6 +3,7 @@
 import NoteList from '@/components/NoteList/NoteList';
 import Pagination from '@/components/Pagination/Pagination';
 import SearchBox from '@/components/SearchBox/SearchBox';
+import Loader from '@/components/Loader/Loader';
 import { fetchNotes } from '@/lib/api/clientApi';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
@@ -42,7 +43,7 @@ export default function FilteredNotesClient({ tag }: { tag?: string }) {
           Create note +
         </Link>
       </header>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <Loader label="Loading notes..." />}
       {error && <p>Sorry something went wrong, try again later.</p>}
       {isSuccess && data.notes.length > 0 && <NoteList notes={data.notes} />}
     </>

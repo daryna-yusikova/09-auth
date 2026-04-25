@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 37, 41, 0.6);
+  background-color: rgba(134, 56, 107, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,11 +12,13 @@
 }
 
 .modal {
-  background-color: #ffffff;
+  background-color: var(--surface);
   padding: 24px;
-  border-radius: 8px;
+  border-radius: 14px;
   max-width: 500px;
   width: 100%;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-hover);
+  animation: floatIn 0.25s ease both;
 }
