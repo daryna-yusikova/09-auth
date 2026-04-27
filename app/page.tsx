@@ -1,3 +1,4 @@
+import NotepadAnimation from '@/components/NotepadAnimation/NotepadAnimation';
 import css from './Home.module.css';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           NoteyPop offers a streamlined experience for anyone who values clarity
           and productivity.
         </p>
+        <NotepadAnimation />
       </div>
     </main>
   );

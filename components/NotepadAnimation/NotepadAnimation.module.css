@@ -1,0 +1,35 @@
+:root{
+    --pixel-size: 0.5;
+}
+
+
+.charecter_container{
+    margin: 0 auto;
+    width: calc(300px*var(--pixel-size));
+    height: calc(450px*var(--pixel-size));
+    overflow: hidden;
+    position: relative;
+}
+
+.charecter_animation {
+    width: calc(1500px*var(--pixel-size));
+    height: auto;
+    animation: moveSpriteSheet 1.2s steps(5) infinite;
+}
+
+.charecter_animation:hover{
+    position: absolute;  
+    top: calc(-450px*var(--pixel-size));
+}
+
+
+@keyframes moveSpriteSheet {
+    from{
+        traransform: translate3d(0,0,0)
+    }
+    to {
+        transform: translate3d(-100%,0,0);
+    }
+}
+
+
