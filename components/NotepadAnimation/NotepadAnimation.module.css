@@ -20,6 +20,7 @@
 .charecter_animation:hover{
     position: absolute;  
     top: calc(-450px*var(--pixel-size));
+    animation: moveSpriteSheet 1.2s steps(5) x2;
 }
 
 
